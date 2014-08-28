@@ -1,0 +1,179 @@
+body {
+  min-height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, sans-serif;
+}
+  #logo {
+    max-width: 100%;
+  }
+
+.loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.loading div {
+  margin: 100px auto;
+  background: #fbfbfb;
+  text-align: center;
+  padding: 10px 0px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #666;
+}
+
+.clear {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  opacity: 0.0;
+}
+
+#main-container {
+  min-height: 100%;
+  max-width: 800px;
+  margin: 0px auto;
+  text-align: center;
+}
+#main-container #imageWrapper {
+	position:relative;
+	display:inline-block;
+}
+#main-container #imageWrapper #imgr {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	text-align: center;
+	border:none;
+	
+}
+#main-container canvas {
+	position:absolute;
+	z-index:1;
+	top:0px;
+	left:0px;
+}
+
+#text {
+	font-size:18px;
+	margin-top:-15px;
+	margin-bottom:15px;
+}
+.filterText {
+	opacity:0;
+	position: absolute;
+	z-index: 10;
+	top: 0px;
+	background: #fff;
+	margin: 9px 10px;
+	padding: 10px;
+	border-radius: 3px;
+}
+#inputTainer {
+	display:inline-block;
+	padding:13px 20px;
+	position:relative;
+	border:1px solid;
+}
+#fileInput {
+	opacity:0;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#controls {
+	opacity: 0;
+	height: 0px;
+	overflow:hidden;
+	border: 1px solid;
+	border-radius: 2px;
+	border-color: #CACACA;
+	color: black;
+	background-color: #eee;
+	background: linear-gradient(to bottom, #ffffff 0%,#e9e9e9 50%,#e3e3e3 51%,#ffffff 100%);
+	background: -webkit-linear-gradient(to bottom, #ffffff 0%,#e9e9e9 50%,#e3e3e3 51%,#ffffff 100%);
+	text-shadow: #FFF 1px 1px;
+}
+.control, a, #inputTainer {
+	background-color: #eee;
+	background: linear-gradient(to bottom, #ffffff 0%,#e9e9e9 50%,#e3e3e3 51%,#ffffff 100%);
+	background: -webkit-linear-gradient(to bottom, #ffffff 0%,#e9e9e9 50%,#e3e3e3 51%,#ffffff 100%);
+	font-size:1em;
+	border-color: #CACACA;
+	cursor:pointer;
+	border-radius:3px;
+}
+.control {
+	width: 20%;
+	float:left;
+}
+@media (max-width: 600px) {
+	.control {
+		font-size:0.85em;
+	}
+}
+@media (max-width: 500px) {
+	.control {
+		width:50%;
+		border-bottom:1px solid #CACACA;
+	}
+}
+.control:active, .control.selected, .con-inner.selected, a:active, #inputTainer:active {
+	background: linear-gradient(to bottom, #f5f5f5 0%,#CACACA 50%,#d8d8d8 51%,#f5f5f5 100%);
+	background: -webkit-linear-gradient(to bottom, #f5f5f5 0%,#CACACA 50%,#d8d8d8 51%,#f5f5f5 100%);
+}
+.control:nth-child(5) {
+	border:none;
+}
+.control:last-child .con-inner {
+	border:none;
+}
+.con-inner {
+	padding: 15px 0px;
+	border-right: 1px solid #CACACA;
+	box-shadow: inset 1px 0px #fff;
+}
+a {
+	width: auto;
+	display: inline-block;
+	padding: 13px 20px;
+	border: 1px solid #CACACA;
+	color: #000;
+	text-decoration: none;
+	text-shadow: #FFF 1px 1px;
+}
+#loader {
+	display:none;
+	position:fixed;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	z-index:10000;
+}
+#loader .img-wrapper {
+	position: absolute;
+	top: 35%;
+	left: 0;
+	width: 100%;
+	height: 45px;
+}
+#loader .img-wrapper img {
+	display:block;
+	margin:0px auto;
+	padding: 10px;
+	background: #fff;
+	border-radius: 26px;
+	border: 5px solid #e7e7e7;
+}
